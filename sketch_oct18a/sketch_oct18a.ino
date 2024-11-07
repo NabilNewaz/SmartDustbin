@@ -33,7 +33,7 @@ void loop() {
       if (!isMoved) {
         isMoved = true;
         Serial.println("OPEN");
-        myservo.write(pos + 160);  // Move servo to "OPEN" position
+        myservo.write(pos + 100);  // Move servo to "OPEN" position
       }
     } else {
       if (isMoved) {
@@ -52,7 +52,7 @@ void loop() {
     if (command == "MOVE_SERVO") {
       manualControl = true;       // Enter manual control mode
       isMoved = true;
-      myservo.write(pos + 160);   // Move servo to "OPEN" position
+      myservo.write(pos + 100);   // Move servo to "OPEN" position
       Serial.println("OPEN");
     } else if (command == "RESET_SERVO") {
       manualControl = false;      // Exit manual control mode
